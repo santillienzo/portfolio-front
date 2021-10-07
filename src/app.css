@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --pri-textColor: #fff;
+    --pri-orangeColor: #FF8C64;
+}
+
+.non-selectable {
+   -moz-user-select: none; 
+   -webkit-user-select: none;
+   -ms-user-select: none;
+   user-select: none; 
+}
+
+body{
+    overflow-x: hidden;
+}
+body::-webkit-scrollbar{
+width: 9px;
+height: 9px;
+}
+body::-webkit-scrollbar-thumb{
+background: #888;
+border-radius: 30px;
+}
+body::-webkit-scrollbar-thumb:hover{
+background: #888;
+}
+body::-webkit-scrollbar-track{
+background: #333333;
+box-shadow: inset 0px 0px 0px 0px #F0F0F0;
+}

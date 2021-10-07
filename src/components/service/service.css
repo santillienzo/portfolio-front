@@ -1,0 +1,133 @@
+.service-container{
+    background: #333;
+    padding-top: 35px;
+    position: relative;
+}
+
+.services-box{
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.service-card{
+    width: 225px;
+    height: max-content;
+    color: #fff;
+    background-color: #56565671;
+    padding: 10px;
+    border-radius: 15px;
+    margin: 0 15px;
+}
+
+.service_icon{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 5px 0;
+}
+
+.service_icon img{
+    width: 50%;
+    filter: invert(100%);
+}
+
+.service-card h5{
+    font-family: poppins, sans-serif;
+    font-size: 1.2rem;
+}
+
+.service_items{
+    border-top: 1px solid #FE8C64;
+    font-family: roboto, sans-serif;
+    padding: 10px 0;
+}
+
+
+.service_tec div{
+    display: flex;
+    align-items: center;
+    border-top: 1px solid #FE8C64;
+    padding: 10px 0;
+}
+
+.service_tec div img{
+    width: 25px;
+}
+
+.service_tec div p{
+    font-family: roboto, sans-serif;
+    margin-left: 10px;
+}
+
+
+
+
+
+@media screen and (max-width: 780px){
+
+    .service-container{
+        padding-bottom: 15px;
+    }
+
+    .service-card{
+        width: 350px;
+        height: max-content;
+        color: #fff;
+        background-color: #56565671;
+        padding: 10px;
+        border-radius: 15px;
+        margin: 0 15px;
+        margin-bottom: 15px;
+    }
+
+    .service_items p{
+        font-size: 1.5rem;
+        margin-bottom: 10px;
+    }
+
+    .service-card h5{
+        font-size: 2rem;
+    }
+
+    .services-box{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .service_tec div img{
+        width: 45px;
+    }
+
+    .service_tec div p{
+        font-size: 1.5rem;
+    }
+
+    @media screen and (max-width: 550px){
+        .service-container{
+            padding-bottom: 35px;
+        }
+
+        .service-card{
+            width: 225px;
+        }
+
+        .service_items p{
+            font-size: 1rem;
+            margin-bottom: 0px;
+        }
+    
+        .service-card h5{
+            font-size: 1.5rem;
+        }
+
+        .service_tec div img{
+            width: 25px;
+        }
+
+        .service_tec div p{
+            font-size: 1rem;
+        }
+    }
+}

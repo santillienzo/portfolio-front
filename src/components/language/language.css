@@ -1,0 +1,141 @@
+.language-container{
+    max-width: 100vw;
+    height: 100vh;
+    background: #333;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 35px;
+}
+
+.sectec-container{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+/****************/
+
+.sectionTec-container{
+    width: 33%;
+    color: #D9D9D9;
+    border-right: 1px solid #FE8C64;
+    padding: 20px;
+}
+
+.sectionTec-container h3{
+    font-family: poppins, sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: right;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.sectionTec-container h3 span{
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    font-weight: 400;
+    font-size: 1rem !important;
+    white-space: nowrap;
+}
+
+
+
+/*********************/
+.tec-container{
+    display: flex;
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.tec-container img{
+    height: 100%;
+    max-width: 50px;
+    object-fit: contain;
+}
+
+.tec-text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-family: roboto,sans-serif;
+    margin-left: 10px;
+}
+
+
+@media screen and (max-width: 780px){
+
+    .language-container{
+        max-width: 100vw;
+        height: max-content;
+        padding-bottom: 35px;
+    }
+    
+    .sectionTec-container{
+        width: 70%;
+        color: #D9D9D9;
+        border-top: 1px solid #FE8C64;
+        border-right: none;
+        padding: 20px;
+    }
+
+    .sectionTec-container:nth-child(1){
+        border-top: none;
+    }
+
+    /**/
+    .sectionTec-container h3{
+        font-size: 3rem;
+    }
+
+    .sectionTec-container h3 span{
+        font-size: 1.3rem !important;
+    }
+    
+    .tec-container{
+        height: 80px;
+        margin-bottom: 10px; 
+    }
+    
+    .tec-text{
+        font-size: 1.9rem;
+    }
+    
+    
+    @media screen and (max-width: 550px){
+        
+        .sectionTec-container{
+            width: 90%;
+        }
+        
+        .sectionTec-container:nth-child(1){
+            border-top: none;
+        }
+        
+        /**/
+        .sectionTec-container h3{
+            font-size: 2rem;
+        }
+
+        .sectionTec-container h3 span{
+            font-size: 1rem !important;
+        }
+
+        .tec-container{
+            height: 50px;
+            margin-bottom: 5px; 
+        }
+        
+        .tec-text{
+            font-size: 1rem;
+        }
+    }
+
+}
