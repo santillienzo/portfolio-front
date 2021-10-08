@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useState} from 'react';
 import './contact.css'
 
 import Title from '../microComponentes/Title';
@@ -46,6 +46,8 @@ const Contact = () => {
                     document.getElementById("mensaje").classList.add("errorInput")
                 }
             break 
+            default: 
+            break;
         }
     }
 
@@ -94,8 +96,8 @@ const Contact = () => {
                 <div className="social-container">
                     <div className="icons">
                         <div className="icon wow animate__animated animate__flipInY">
-                            <a href="https://www.instagram.com/santillienzo/" className="i-contain" target="_BLANK">
-                                <i class="fab fa-instagram"></i>
+                            <a href="https://www.instagram.com/santillienzo/" className="i-contain" target="_BLANK" rel="noreferrer">
+                                <i className="fab fa-instagram"></i>
                             </a>
                             <div className="text-icon">
                                 <span>Instagram</span>
@@ -103,8 +105,8 @@ const Contact = () => {
                             </div>
                         </div>
                         <div className="icon wow animate__animated animate__flipInY">
-                            <a href="https://wa.me/5492634786580" className="i-contain" target="_BLANK">
-                                <i class="fab fa-whatsapp"></i>
+                            <a href="https://wa.me/5492634786580" className="i-contain" target="_BLANK" rel="noreferrer">
+                                <i className="fab fa-whatsapp"></i>
                             </a>
                             <div className="text-icon">
                                 <span>Whatsapp</span>
@@ -112,8 +114,8 @@ const Contact = () => {
                             </div>
                         </div>
                         <div className="icon wow animate__animated animate__flipInY">
-                            <a href="https://github.com/santillienzo?tab=repositories" className="i-contain" target="_BLANK">
-                                <i class="fab fa-github"></i>
+                            <a href="https://github.com/santillienzo?tab=repositories" className="i-contain" target="_BLANK" rel="noreferrer">
+                                <i className="fab fa-github"></i>
                             </a>
                             <div className="text-icon">
                                 <span>GitHub</span>
@@ -121,8 +123,8 @@ const Contact = () => {
                             </div>
                         </div>
                         <div className="icon wow animate__animated animate__flipInY">
-                            <a href="https://www.linkedin.com/in/enzo-santilli-bb06a01a9/" className="i-contain" target="_BLANK">
-                                <i class="fab fa-linkedin-in"></i>
+                            <a href="https://www.linkedin.com/in/enzo-santilli-bb06a01a9/" className="i-contain" target="_BLANK" rel="noreferrer">
+                                <i className="fab fa-linkedin-in"></i>
                             </a>
                             <div className="text-icon">
                                 <span>Linkedin</span>
@@ -131,7 +133,7 @@ const Contact = () => {
                         </div>
                         <div className="icon wow animate__animated animate__flipInY">
                             <a href="mailto:enzo.santilli16@gmail.com.ar" className="i-contain" >
-                                <i class="far fa-envelope"></i>
+                                <i className="far fa-envelope"></i>
                             </a>
                             <div className="text-icon">
                                 <span>E-mail</span>

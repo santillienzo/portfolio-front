@@ -13,8 +13,7 @@ import logoPomofy from '../assets/worksImage/logoPomofy.png';
 import fondoDecibeles from '../assets/worksImage/fondoDecibeles.png';
 import logoDecibeles from '../assets/worksImage/logoDecibeles.png';
 
-
-export default{
+const worksImg = {
     "fondoSpace":fondoSpace,
     "logoSpace": logoSpace,
     "fondoAccess":fondoAccess,
@@ -30,3 +29,6 @@ export default{
     "fondoDecibeles":fondoDecibeles,
     "logoDecibeles": logoDecibeles,
 }
+
+
+export default worksImg;

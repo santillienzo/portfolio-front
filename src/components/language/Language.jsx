@@ -7,7 +7,7 @@ const Tecnology =(props)=>{
     
     return(
         <div className="tec-container">
-            <img src={props.icono} className={"wow animate__animated " + props.clase}/>
+            <img src={props.icono} className={"wow animate__animated " + props.clase} alt=""/>
             <div className="tec-text">
                 <h4>{props.nombre}</h4>
             </div>

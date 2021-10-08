@@ -10,7 +10,7 @@ import Title from '../microComponentes/Title';
 const ServiceCard =(props)=>{
     return(
         <div className="service-card wow animate__animated animate__flipInY">
-            <div className="service_icon"><img src={icons.pc}/></div>
+            <div className="service_icon"><img src={icons.pc} alt=""/></div>
             <h5>{props.title}</h5>
             <div className="service_items">
                 {
@@ -24,7 +24,7 @@ const ServiceCard =(props)=>{
                 {
                     props.servTec.map((elemnt,i)=>(
                             <div key={i}>
-                                <img src={elemnt.logo}/>
+                                <img src={elemnt.logo} alt=""/>
                                 <p>{elemnt.name}</p>
                             </div>
                         )

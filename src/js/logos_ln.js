@@ -13,7 +13,7 @@ import materialUi from '../assets/logos/material-ui.png'
 import mongo from '../assets/logos/mongo.png'
 import node from '../assets/logos/node.svg'
 
-export default{
+const logos_In = {
     "react": react,
     "bootstrap": bootstrap,
     "c" : c,
@@ -29,3 +29,5 @@ export default{
     "mongo":mongo,
     "node":node,
 }
+
+export default logos_In;

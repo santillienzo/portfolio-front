@@ -64,7 +64,7 @@ const Works = () => {
             <div className="works-images">
                 {
                     objWork.map((item,i)=>(
-                        <a className={`work ${item.class}`} key={i} href={item.url} target="_BLANK">
+                        <a className={`work ${item.class}`} key={i} href={item.url} target="_BLANK" rel="noreferrer">
                             <img className="fondoImagen" src={item.fondoImagen} alt={item.altFondo}/>
                             <img className="logoImagen" src={item.logoImagen} alt={item.altLogo}/>
                         </a>

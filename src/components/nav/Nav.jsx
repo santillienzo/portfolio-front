@@ -33,11 +33,11 @@ const Nav = () => {
             <nav className="nav-container-res">
                 <div className="nav-general-res">
                     <div className="nav-icon-res" onClick={desplegarMenu}>
-                        <i class="fas fa-bars"></i>
+                        <i className="fas fa-bars"></i>
                     </div>
                     <div className="nav-content-res animate__animated" id="menu-res">
                         <div className="close-icon">
-                            <i class="fas fa-times" onClick={desplegarMenu}></i>
+                            <i className="fas fa-times" onClick={desplegarMenu}></i>
                         </div>
                         <ul className="nav-elementos-res">
                             <li><LinkScroll onClick={desplegarMenu} to="home" smooth duration={500} className="link-scroll-res">Inicio</LinkScroll></li>
@@ -54,7 +54,7 @@ const Nav = () => {
         return (
             <nav className="nav-container">
                 <ul className="nav-elementos non-selectable">
-                    <li><LinkScroll LinkScroll to="about" smooth duration={500} className="link-scroll">¿Quién soy?</LinkScroll></li>
+                    <li><LinkScroll to="about" smooth duration={500} className="link-scroll">¿Quién soy?</LinkScroll></li>
                     <li><LinkScroll to="works" smooth duration={500} className="link-scroll">Trabajos</LinkScroll></li>
                     <li className="elmt-img"><LinkScroll to="home" smooth duration={500}><img src={Logo} alt=""/></LinkScroll></li>
                     <li><LinkScroll to="service" smooth duration={500} className="link-scroll">Servicios</LinkScroll></li>

@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import './header.css'
 import './header_responsive.css'
 
@@ -7,7 +7,7 @@ import './header_responsive.css'
 const Header = () => {
 
     const [activate, setActivate] = useState(false);
-    const [ventana,setVentana] = useState(window.screen.width);
+    const ventana = window.screen.width;
     
 
     
@@ -47,7 +47,7 @@ const Header = () => {
             const texto_nombre = document.querySelector(".name-text");
             const about_info = document.querySelector(".text-info");
             
-            if (activate == false) {
+            if (activate === false) {
                 setActivate(true);
                 about_info.classList.remove("animate__bounceOutRight")
                 texto_nombre.style.marginLeft = "5%";

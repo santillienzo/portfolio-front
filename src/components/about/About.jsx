@@ -32,13 +32,14 @@ const AboutModal = (props) =>{
         const content = document.getElementById('parrafo');
         content.innerHTML = props.content;
 
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     },[])
 
     return(
         <div className="aboutModal-container">
             <div className="aboutModal-content">
                 <div className="aboutModal-close" onClick={props.close}>
-                    <i class="far fa-times-circle" ></i>
+                    <i className="far fa-times-circle" ></i>
                 </div>
                 <div className="aboutModal-content-title"><h3>{props.title}</h3></div>
                 <div className="aboutModal-content-content">
@@ -61,7 +62,7 @@ const About = () => {
             <Title title="¿Quién soy?"/>
             <div className="presentation-container">
                 <div className="presentation">
-                    <h5>Mi nombre es Enzo Santilli y soy Fullstack Developer, pero amante del Frontend.</h5>
+                    <h5>Mi nombre es Enzo Santilli y soy Fullstack Developer, amante del Frontend.</h5>
                 </div>
                 <div className="items-container">
                     <AboutCard 
