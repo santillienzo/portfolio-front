@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import './contact.css'
 
 import Title from '../microComponentes/Title';
-import { sendEmail } from '../../js/core';
+import { sendEmail } from '../../js/Services/core';
 
 const Contact = () => {
 
@@ -95,15 +95,6 @@ const Contact = () => {
             <div className="contents-container">
                 <div className="social-container">
                     <div className="icons">
-                        <div className="icon wow animate__animated animate__flipInY">
-                            <a href="https://www.instagram.com/santillienzo/" className="i-contain" target="_BLANK" rel="noreferrer">
-                                <i className="fab fa-instagram"></i>
-                            </a>
-                            <div className="text-icon">
-                                <span>Instagram</span>
-                                <p>@santillienzo</p>
-                            </div>
-                        </div>
                         <div className="icon wow animate__animated animate__flipInY">
                             <a href="https://wa.me/5492634786580" className="i-contain" target="_BLANK" rel="noreferrer">
                                 <i className="fab fa-whatsapp"></i>

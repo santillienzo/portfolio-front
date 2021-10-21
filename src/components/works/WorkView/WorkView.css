@@ -1,0 +1,32 @@
+.work_view-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.work_view-img-container{
+    height: 100%;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+.work_view-img-container:hover .work_view-img-container-background img{
+    filter: contrast(80%);
+    transition: .5s;
+}
+
+.work_view-img-container-background img{
+    object-fit: contain;
+    width: 100%;
+    filter: contrast(60%);
+    transition: .5s;
+}
+
+.work_view-img-container-logo img{
+    position: absolute;
+    width: 100px;
+    top: 50%;
+    left: 50%;
+    margin-left: -50px;
+    margin-top: -50px;
+    border-radius: 50%;
+}

@@ -1,10 +1,8 @@
 import fondoSpace from '../assets/worksImage/fondoSpace.png';
 import logoSpace from '../assets/worksImage/logoSpace.png'
-import fondoAccess from '../assets/worksImage/fondoAccess.png';
 import logoAccess from '../assets/worksImage/logoAccess.png'
 import fondoGlow from '../assets/worksImage/fondoGlow.png';
 import logoGlow from '../assets/worksImage/logoGlow.png';
-import fondoRepuesto from '../assets/worksImage/repuestoFondo.png';
 import logoRepuesto from '../assets/worksImage/repuestoLogo.png';
 import fondoWeather from '../assets/worksImage/fondoWeather.png';
 import logoWeather from '../assets/worksImage/logoWeather.png';
@@ -16,11 +14,9 @@ import logoDecibeles from '../assets/worksImage/logoDecibeles.png';
 const worksImg = {
     "fondoSpace":fondoSpace,
     "logoSpace": logoSpace,
-    "fondoAccess":fondoAccess,
     "logoAccess": logoAccess,
     "fondoGlow":fondoGlow,
     "logoGlow": logoGlow,
-    "fondoRepuesto":fondoRepuesto,
     "logoRepuesto": logoRepuesto,
     "fondoWeather":fondoWeather,
     "logoWeather": logoWeather,

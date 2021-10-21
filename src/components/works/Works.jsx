@@ -1,76 +1,113 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './works.css'
-import './Coffe.css'
 
-import imgWorks from '../../js/worksImg'
+import art from '../../assets/Works/Category/art.png' 
+import e_commerce from '../../assets/Works/Category/e-commerce.png' 
+import landing from '../../assets/Works/Category/landing-page.png' 
+import portfolio from '../../assets/Works/Category/portafolio.png' 
+import app from '../../assets/Works/Category/apps.png' 
+
+import Title from '../microComponentes/Title';
+import WorkListView from './WorkListView/WorkListView';
+import { getWorks } from '../../js/Services/worksService';
+import { getTechnologies } from '../../js/Services/techService';
 
 
 
-const Works = () => {
+const WorkCategory = ({id, title, img, call})=>{
+    return (
+        <div className="work_category-container" onClick={()=> call(id)}>
+            <div className="work_category-box">
+                <div className="work_category-img">
+                    <img src={img} alt="" />
+                </div>
+                <p>{title}</p>
+            </div>
+        </div>
+    )
+}
 
-    // const redirigirWork = (url)=>{
-    //     window.open(url,'_blank');
-    // }
-    
-    const objWork = [
+const Works = () => {    
+    const [workActivate, setWorkActivate] = useState(false);
+    const [workList, setWorkList] = useState([])
+    const [workListByCategory, setWorkListByCategory] = useState([])
+    const [techList, setTechList] = useState([])
+
+    const workCategories = [
         {
-            "fondoImagen": imgWorks.fondoSpace,
-            "logoImagen": imgWorks.logoSpace,
-            "url": "http://spaceapps.com.ar",
-            "altLogo": "Logo Space Apps, Tipo de logo Isotipo",
-            "altFondo":"Pantalla de inicio Space Apps, diseño minimalista y bello",
-            "class":""
-        },
-        {   
-            "fondoImagen": imgWorks.fondoWeather,
-            "logoImagen": imgWorks.logoWeather,
-            "url": "https://piquant-cork.surge.sh/",
-            "altLogo": "trabajo de enzo logo weather",
-            "altFondo": "Diseño de aplicación que da el tiempo actual de una ciudad",
-            "class":""
-        },
-        {   
-            "fondoImagen": imgWorks.fondoDecibeles,
-            "logoImagen": imgWorks.logoDecibeles,
-            "url": "https://decibeles-front.surge.sh/",
-            "altLogo": "Logo DA. Diseñado por Enzo Santilli",
-            "altFondo": "Modelo de tienda virtual diseñada por Enzo Santilli",
-            "class":"in-production"
-        },
-        {   
-            "fondoImagen": imgWorks.fondoPomofy,
-            "logoImagen": imgWorks.logoPomofy,
-            "url": "https://pomofy.surge.sh/",
-            "altLogo": "Pomofy, la técnica Pomodoro y Spotify, todo en uno",
-            "altFondo": "Tecnica Pomodoro y Spotify, todo en uno.",
-            "class":"in-production"
+            id: 1,
+            title: "Aplicaciones",
+            img: app,
         },
         {
-            "fondoImagen": imgWorks.fondoGlow,
-            "logoImagen": imgWorks.logoGlow,
-            "url": "http://glowstore.com.ar/",
-            "altLogo": "Tienda de ropa Glow",
-            "altFondo":"Página web de Glow diseñada por Enzo Santilli, tienda online de indumentaria y accesorios.",
-            "class":""
-        }
+            id: 2,
+            title: "E-commerce",
+            img: e_commerce,
+        },
+        {
+            id: 3,
+            title: "Portafolios",
+            img: portfolio,
+        },
+        {
+            id: 4,
+            title: "Landing pages",
+            img: landing,
+        },
+        {
+            id: 5,
+            title: "Css Art",
+            img: art,
+            call: ""
+        },
+        
     ]
 
+    
+    const handleWorkList = (categoryId)=>{
+        setWorkListByCategory(workList.filter(work => work.category === categoryId))
+        setWorkActivate(true)
+    }
+
+    const loadWorks = ()=>{
+        getWorks().then(data=>{
+            setWorkList(data)
+        })
+    }
+
+    const loadTechnologies = ()=>{
+        getTechnologies().then(data=>{
+            setTechList(data)
+        })
+    }
+
+    useEffect(()=>{
+        loadWorks()
+        loadTechnologies()
+    }, [])
 
     return (
         <section className="works-container" id="works">
-            <div className="work-title">
-                <h3>Trabajos</h3>                
-            </div>
-            <div className="works-images">
+            <Title title="Trabajos"/>
+            <div className="category-container">
                 {
-                    objWork.map((item,i)=>(
-                        <a className={`work ${item.class}`} key={i} href={item.url} target="_BLANK" rel="noreferrer">
-                            <img className="fondoImagen" src={item.fondoImagen} alt={item.altFondo}/>
-                            <img className="logoImagen" src={item.logoImagen} alt={item.altLogo}/>
-                        </a>
+                    workCategories.map((e)=>(
+                        <WorkCategory 
+                            key={e.id}
+                            id={e.id}
+                            title={e.title} 
+                            img={e.img}
+                            call={handleWorkList}
+                        />
                     ))
                 }
             </div>
+            {
+                workActivate ?
+                (
+                    <WorkListView techList={techList} workList={workListByCategory} close={()=> setWorkActivate(false)}/>
+                ):("")
+            }
         </section>
     );
 };
