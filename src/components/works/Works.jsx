@@ -16,8 +16,8 @@ import { getTechnologies } from '../../js/Services/techService';
 
 const WorkCategory = ({id, title, img, call})=>{
     return (
-        <div className="work_category-container" onClick={()=> call(id)}>
-            <div className="work_category-box">
+        <div className="work_category-container">
+            <div className="work_category-box" onClick={()=> call(id)}>
                 <div className="work_category-img">
                     <img src={img} alt="" />
                 </div>

@@ -61,10 +61,40 @@
     .works-container{
         display: block;
     }
-    
+
+    /* Work category */
+
+    .work_category-container p{
+        font-size: 1.5rem;
+    }
+
+    .work_category-img{
+        width: 300px;
+        height: 300px;
+    }
+
+    .work_category-img img{
+        width: 60%;
+        transition: .5s;
+    }
+
+    .work_category-box:hover .work_category-img img{
+        width: 68%;
+        transition: .5s ease-out;
+    }
+        
 
     @media screen and (max-width: 550px ){    
         
+        .work_category-container p{
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        .work_category-img{
+            width: 150px;
+            height: 150px;
+        }
     }
     
 }

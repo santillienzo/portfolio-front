@@ -1,5 +1,3 @@
-const axios = require("axios")
-
 const uri= `https://portfolio-back-enzo.herokuapp.com`;
 // const uri= `http://localhost:5000`;
 
