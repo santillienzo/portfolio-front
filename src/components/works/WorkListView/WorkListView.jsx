@@ -1,6 +1,11 @@
-import React from 'react';
+import React, {Suspense, lazy, useState } from 'react';
 import './WorkListView.css'
-import { useState } from 'react';
+import Loading from '../../microComponentes/Loading/Loading';
+
+const Logo = lazy(()=>import('./ImgWork/Logo'))
+const Background = lazy(()=>import('./ImgWork/Background'))
+
+
 
 const WorkListView = ({workList, close, techList}) =>{
     const uri = "https://portfolio-back-enzo.herokuapp.com/api/"
@@ -44,7 +49,9 @@ const WorkListView = ({workList, close, techList}) =>{
                                 url: e.url
                             })}
                         >
-                            <img src={`${uri}works/works/logo/${e._id}`} alt="" />
+                        <Suspense fallback={<Loading/>}>
+                            <Logo id={e._id}/>
+                        </Suspense>
                         </li>
                     ))
                 }
@@ -57,7 +64,10 @@ const WorkListView = ({workList, close, techList}) =>{
                             <div>
                                 <h5>{values.title}</h5>
                                 <p className="work_list-technology-description">{values.description}</p>
-                                <a href={values.url}>{values.url}</a>
+                                <div>
+                                    <i className="fas fa-link"></i>
+                                    <a href={values.url} target="_BLANK" rel="noreferrer">{values.url}</a>
+                                </div>
                                 <div className="work_list-technology-container">
                                     {
                                         values.technologies.map((e,i)=>(
@@ -66,14 +76,16 @@ const WorkListView = ({workList, close, techList}) =>{
                                     }
                                 </div>
                                 <div className="work-list-img-work">
-                                    <img src={`${uri}works/works/background/${values.id}`} alt="" />
+                                <Suspense fallback={<Loading/>}>
+                                    <Background id={values.id}/>
+                                </Suspense>
                                 </div>
                             </div>
                         )
                         :
                         (
-                            <div>
-                                <h5>Selecciona un trabajo</h5>
+                            <div className="work-non_selected">
+                                <h5>Selecciona un <span>trabajo</span></h5>
                             </div>
                         )
                     }
