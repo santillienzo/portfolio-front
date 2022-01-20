@@ -26,7 +26,7 @@ const Works = () => {
             setFilterWorkList(workList.filter(
                 (work)=>{
                     for (let i = 0; i < work.category.length; i++) {
-                        if (work.category[i] == category) {
+                        if (work.category[i] === category) {
                             return true
                         }
                     }
