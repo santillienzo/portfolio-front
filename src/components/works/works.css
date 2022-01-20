@@ -5,96 +5,155 @@
     position: relative;
 }
 
-.category-container{
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    justify-items: center;
-    align-items: center;
-}
-
-/* Work category */
-
-.work_category-container{
+.filterWorks-container{
     width: 50%;
+    margin: auto;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
 
-.work_category-box{
-    cursor: pointer;
-}
-
-.work_category-container p{
+.filterWorks-container div{
+    position: relative;
+    font-family: poppins, sans-serif;
+    padding: 5px 10px;
+    margin: 10px 10px;
     color: #fff;
-    font-family: roboto, sans-serif;
-    text-align: center;
-
-}
-
-.work_category-img{
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     background-color: #424242;
-}
-
-.work_category-img img{
-    width: 60%;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .25);
+    overflow: hidden;
     transition: .5s;
 }
 
-.work_category-box:hover .work_category-img img{
-    width: 68%;
-    transition: .5s ease-out;
+.filterWorks-container div:hover{
+    background-color: #807e7e;
+}
+
+.filterWorks-container div p{
+    position: relative;
+    z-index: 1;
+    font-size: 1rem;
+}
+
+.filterWorks-container div.filter_active{
+    background-color: #807e7e;
 }
 
 
+.workList-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 95%;
+    margin: auto;
+    margin-top: 20px;
+}
 
-@media screen and (max-width: 780px){
-    .works-container{
-        display: block;
+.work-cover{
+    width: 250px;
+    height: 250px;
+    margin: 10px;
+    border-radius: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.work-background{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.work-background img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(5px);
+    transition: .5s;
+}
+
+.work-logo{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 80px;
+    max-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: .5s;
+}
+.work-cover:hover .work-background img{
+    filter: blur(80px);
+}
+.work-cover:hover .work-logo{
+    transform: translateY(-70px);
+}
+
+.work-logo img{
+    width: 100%;
+}
+
+.work-description{
+    position: relative;
+    height: 100%;
+    opacity: 0;
+    margin-top:50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+
+}
+
+.work-cover:hover .work-description{
+    opacity: 1;
+}
+
+.work-description-tech{
+    display: flex;
+}
+
+.work-description-tech_img{
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.work-description-tech_img img{
+    width: 100%;
+}
+
+.work-description a{
+    display: inline-block;
+    margin-top: 5px;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid var(--pri-orangeColor);
+    font-family: poppins, sans-serif;
+    border-radius: 25px;
+    transition: .5s;
+}
+
+.work-description a:hover{
+    background-color: var(--pri-orangeColor);
+}
+
+@media (max-width: 850px) {
+    .filterWorks-container{
+        width: 95%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
     }
-
-    /* Work category */
-
-    .work_category-container p{
-        font-size: 1.5rem;
-    }
-
-    .work_category-img{
-        width: 300px;
-        height: 300px;
-    }
-
-    .work_category-img img{
-        width: 60%;
-        transition: .5s;
-    }
-
-    .work_category-box:hover .work_category-img img{
-        width: 68%;
-        transition: .5s ease-out;
-    }
-        
-
-    @media screen and (max-width: 550px ){    
-        
-        .work_category-container p{
-            font-size: 1rem;
-            margin-top: 10px;
-        }
-
-        .work_category-img{
-            width: 150px;
-            height: 150px;
-        }
-    }
-    
 }

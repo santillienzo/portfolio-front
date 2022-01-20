@@ -12,6 +12,7 @@ import sql from '../assets/logos/sql.png'
 import materialUi from '../assets/logos/material-ui.png'
 import mongo from '../assets/logos/mongo.png'
 import node from '../assets/logos/node.svg'
+import next from '../assets/logos/nextjs.png'
 
 const logos_In = {
     "react": react,
@@ -28,6 +29,7 @@ const logos_In = {
     "materialUi":materialUi,
     "mongo":mongo,
     "node":node,
+    "next":next,
 }
 
 export default logos_In;

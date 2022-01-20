@@ -92,6 +92,11 @@ const Language = () => {
                             "nombre": "Bootstrap",
                             "clase": ""
                         },
+                        {
+                            "imagen": logos.next,
+                            "nombre": "Next.js",
+                            "clase": ""
+                        },
                     ]
                     }
                     

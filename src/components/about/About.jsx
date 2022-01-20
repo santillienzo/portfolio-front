@@ -56,6 +56,25 @@ const About = () => {
         title: "",
         content: ""
     })
+
+    function disableScroll(){  
+        var x = window.scrollX;
+        var y = window.scrollY;
+        window.onscroll = function(){ window.scrollTo(x, y) };
+    }
+    
+    function enableScroll(){  
+        window.onscroll = null;
+    }
+
+    useEffect(()=>{
+        if (aboutModalState.active) {
+            disableScroll()
+        }else{
+            enableScroll()
+        }
+    }, [aboutModalState])
+    
     return (
         <>
         <section className="about-container" id="about">
